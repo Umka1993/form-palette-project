@@ -1,0 +1,24 @@
+.wrap{
+  background: #000000;
+  border-radius: 28px;
+  height: 100%;
+  padding: 40px 51px;
+
+  .headline{
+    a{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 22px;
+      text-align: center;
+      letter-spacing: -0.408px;
+      color: #FFFFFF;
+      margin-right: 38px;
+      background: none;
+    }
+    .active{
+      text-decoration-line: underline;
+    }
+
+  }
+}

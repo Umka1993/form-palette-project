@@ -1,0 +1,26 @@
+@font-face {
+    font-family: GothamPro;
+    src: local('GothamPro'), url('../font/GothamPro.woff') format('woff');
+}
+
+.app{
+    background: rgba(118, 118, 128, 0.24);
+    height: 100vh;
+    padding: 20px;
+}
+*
+{
+    font-family: GothamPro, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.container {
+    max-width: 90%;
+    width: 1354px;
+    margin: 0 auto;
+    height: 100%;
+}

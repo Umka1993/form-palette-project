@@ -1,0 +1,86 @@
+.wrap{
+
+  form{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    max-width: 343px;
+    label{
+      position: relative;
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 22px;
+      letter-spacing: -0.408px;
+      color: rgba(235, 235, 245, 0.6);
+      padding-left: 12px;
+    }
+    input{
+      &:not([type = 'file']) {
+        margin-top: 5px;
+        padding: 7px 12px;
+        background: rgba(118, 118, 128, 0.24);
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        color: rgba(235, 235, 245, 0.6);
+      }
+    }
+    label > [type = 'file']{
+
+      width: 122px;
+      height: 86px;
+      position: absolute;
+      top: 23px;
+      left: 10px;
+      z-index: -99;
+      font-size: 0;
+    }
+    .photoBlock{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 122px;
+      height: 86px;
+      background-color: rgba(118, 118, 128, 0.24);
+      border-radius: 10px;
+      margin-left: -12px;
+      img{
+        width: 60px;
+        height: 56px;
+      }
+    }
+    .photoBlockPreview{
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    button{
+      margin-top: 48px;
+      padding: 14px;
+      background: #007AFF;
+      border-radius: 8px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 22px;
+      text-align: center;
+      letter-spacing: -0.408px;
+      color: #FFFFFF;
+    }
+    .responseLabel{
+      margin-top: 23px;
+    }
+    .responseInput{
+      min-height: 120px;
+    }
+
+  }
+}
