@@ -1,10 +1,9 @@
 .wrap{
-
   form{
     margin-top: 24px;
     display: flex;
     flex-direction: column;
-    max-width: 343px;
+
     label{
       position: relative;
       margin-top: 18px;
@@ -62,19 +61,7 @@
       background-repeat: no-repeat;
     }
 
-    button{
-      margin-top: 48px;
-      padding: 14px;
-      background: #007AFF;
-      border-radius: 8px;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 22px;
-      text-align: center;
-      letter-spacing: -0.408px;
-      color: #FFFFFF;
-    }
+
     .responseLabel{
       margin-top: 23px;
     }

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import s from './form.module.scss';
+import s from './formTab.module.scss';
 import loadPhoto from '../../assets/photos/loadPhoto.png';
 import { useDropzone } from 'react-dropzone';
 import { api } from '../../api/baseRequest';
+import { Button } from '../ui/Button';
 
-export const Form: React.FC = () => {
+export const FormTab: React.FC = () => {
   const [image, setImage] = useState<File>();
   const [picture, setPicture] = useState<string | Blob>('');
   const [preview, setPreview] = useState<string | null>();
@@ -116,7 +117,9 @@ export const Form: React.FC = () => {
             }}
           />
         </label>
-        <button type={'submit'}>Сохранить</button>
+        <Button>
+          <button type={'submit'}>Сохранить</button>
+        </Button>
         <label className={s.responseLabel}>Response</label>
         <input className={s.responseInput} readOnly={true} type="text" value={response} />
       </form>

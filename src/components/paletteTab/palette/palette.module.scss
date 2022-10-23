@@ -1,0 +1,14 @@
+.wrap{
+  display: grid;
+  grid-template-columns: repeat(4, 54px);
+  grid-template-rows: repeat(2, 54px);
+  grid-column-gap: 25px;
+  grid-row-gap: 17px;
+  margin-top: 33px;
+  margin-left: 25px;
+  .colorItem{
+    border-radius: 5px;
+    border: 1px solid rgba(118, 118, 128, 0.24);;
+  }
+
+}
