@@ -1,14 +1,30 @@
 .wrap{
   display: grid;
-  grid-template-columns: repeat(4, 54px);
-  grid-template-rows: repeat(2, 54px);
-  grid-column-gap: 25px;
+  grid-template-columns: repeat(4, 56px);
+  grid-column-gap: 22px;
   grid-row-gap: 17px;
   margin-top: 33px;
   margin-left: 25px;
-  .colorItem{
-    border-radius: 5px;
-    border: 1px solid rgba(118, 118, 128, 0.24);;
+  height: 60vh;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 122, 255, 0.4);
+
+  }
+  .paletteItem{
+    padding: 7px;
+  }
+  .paletteCard{
+  }
+
+  .colorPalette{
+    width: 100%;
+    position: absolute;
+    right: -240px;
+    top: 0
   }
 
 }

@@ -29,7 +29,7 @@
         "require-jsdoc": "off",
         "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/ban-types": "off",
-        "@typescript-eslint/restrict-template-expressions": ["warn", { "allowNumber": true }],
+        "@typescript-eslint/restrict-template-expressions": ["warn", { "allowNumber": true, "allowAny": true}],
         "@typescript-eslint/strict-boolean-expressions": 0,
         "prettier/prettier": ["warn", {
             "endOfLine":"auto",
@@ -47,6 +47,8 @@
                 "checksVoidReturn": false
             }
         ],
-        "@typescript-eslint/no-unused-vars": "off"
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "comma-dangle": ["off", "never"]
     }
 }

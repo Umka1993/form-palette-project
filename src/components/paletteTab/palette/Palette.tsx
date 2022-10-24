@@ -1,58 +1,74 @@
-import React, { createRef, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import s from './palette.module.scss';
 import { IColor } from '../../../types';
-import { ColorPicker } from '../colorPicker/ColorPicker';
 import { useClickOutside } from '../../../hooks/useClickOutside';
-import { HSLColor } from 'react-color';
+import { SketchPicker } from 'react-color';
 import { Color } from './color/Color';
+import { paletteSlice } from '../../../store/reducers/PaletteSlice';
+import { useDispatch } from 'react-redux';
 
 interface IColors {
   colorCollection: IColor[];
+  pickerOpen: boolean;
 }
 
 export const Palette: React.FC<IColors> = ({ colorCollection }) => {
-  const itemEls = useRef<any[]>();
-  const ref = useRef(null);
-  const myRef = useRef(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const refPal = useRef<HTMLDivElement>(null);
+  const { clickedOutside, handleClickInside } = useClickOutside(refPal);
+  const [idHandledPalette, setIdHandledPalette] = useState<number>();
+  const [newColorPalette, setNewColorPalette] = useState('');
+  const [handledCollection, setHandledCollection] = useState<IColor[]>(colorCollection);
+  const { handlePalette } = paletteSlice.actions;
+  const dispatch = useDispatch();
+  const [isOpen, setOpen] = useState(false);
 
-  const { clickedOutside, handleClickInside } = useClickOutside(ref);
+  useEffect(() => {
+    if (colorCollection) {
+      setHandledCollection(colorCollection);
+    }
+  }, [colorCollection]);
 
-  const collectionColorsHandler = ({ id, color }: IColor): void => {
-    // console.log(id, color);
-  };
-
-  const handleOpen = (): void => {
-    setIsOpen(true);
-  };
+  useEffect(() => {
+    if (newColorPalette && idHandledPalette) {
+      dispatch(handlePalette({ id: idHandledPalette, color: newColorPalette }));
+    }
+  }, [newColorPalette]);
 
   const isColorPickerOpen = isOpen && !clickedOutside;
 
+  const open = (id: number): void => {
+    setIdHandledPalette(id);
+    setOpen(true);
+    handleClickInside();
+  };
+
+  const handleColorPalette = (arg: string): void => {
+    setNewColorPalette(arg);
+  };
+
+  const style = {
+    gridTemplateRows: `repeat(${Math.ceil(handledCollection.length / 4)}, 55px)`
+  };
+
   return (
-    <div className={s.wrap}>
-      {colorCollection.map(({ color, id }) => {
+    <div className={s.wrap} style={style}>
+      {handledCollection.map(({ color, id }) => {
         return (
-          <Color
-            key={id}
-            color={color}
-            id={id}
-            collectionColorsHandler={collectionColorsHandler}
-            setIsOpen={handleOpen}>
-            {isColorPickerOpen && (
-              <ColorPicker
-                // addColor={setColor}
-                color={color}
-                isOpen={true}
-                // handleClickInside={handleClickInside}
-                // myRef={setTextInputRef}
-                addColor={() => console.log('addColor')}
-                handleClickInside={handleClickInside}
-                myRef={myRef}
-              />
-            )}
-          </Color>
+          <div className={s.paletteItem} key={id} ref={refPal} onClick={() => open(id)}>
+            <Color key={id} color={color} id={id} />
+          </div>
         );
       })}
+
+      {isColorPickerOpen && (
+        <div className={s.paletteCard} ref={refPal} onClick={() => handleClickInside}>
+          <SketchPicker
+            color={'red'}
+            className={s.colorPalette}
+            onChange={(e) => handleColorPalette(e.hex)}
+          />
+        </div>
+      )}
     </div>
   );
 };

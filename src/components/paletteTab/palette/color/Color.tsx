@@ -1,35 +1,26 @@
-import React, { MutableRefObject, ReactNode, useEffect, useRef, useState } from 'react';
-import s from '../palette.module.scss';
-import { ColorPicker } from '../../colorPicker/ColorPicker';
-import { useClickOutside } from '../../../../hooks/useClickOutside';
+import React, { useState } from 'react';
+import s from './color.module.scss';
 import { IColor } from '../../../../types';
+import { paletteSlice } from '../../../../store/reducers/PaletteSlice';
+import { useDispatch } from 'react-redux';
 
-interface IColorItem extends IColor {
-  collectionColorsHandler: (arg: IColor) => void;
-  children: ReactNode;
-  setIsOpen?: () => void;
-}
-
-export const Color: React.FC<IColorItem> = ({
-  setIsOpen,
-  children,
-  color,
-  id,
-  collectionColorsHandler
-}) => {
-  const [newColor, setColor] = useState('');
-
-  useEffect(() => {
-    collectionColorsHandler({ id, color: newColor });
-  }, [newColor]);
+export const Color: React.FC<IColor> = ({ color, id }) => {
+  const [isHover, setIsHover] = useState(false);
+  const { deletePalette } = paletteSlice.actions;
+  const dispatch = useDispatch();
 
   return (
     <div
+      onMouseOver={() => setIsHover(true)}
+      onMouseOut={() => setIsHover(false)}
       className={s.colorItem}
       key={id}
-      onClick={() => setIsOpen?.()}
       style={{ backgroundColor: color }}>
-      {children}
+      {isHover && (
+        <button onClick={() => dispatch(deletePalette(id))} className={s.close}>
+          X
+        </button>
+      )}
     </div>
   );
 };

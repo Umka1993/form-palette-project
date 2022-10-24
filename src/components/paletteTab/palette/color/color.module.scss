@@ -1,0 +1,26 @@
+.colorItem{
+  height: 54px;
+  width: 54px;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid rgba(118, 118, 128, 0.24);
+  cursor: pointer;
+  .close{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-weight: bold;
+    color: white;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 2px;
+    font-size: 11px;
+    z-index: 999999;
+    line-height: 0;
+    cursor: pointer;
+  }
+}
