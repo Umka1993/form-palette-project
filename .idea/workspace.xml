@@ -5,28 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06bad563-d270-419e-92ee-2bbb09431bcf" name="Changes" comment="task is ready">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/paletteTab/palette/color/color.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/redux.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/PaletteSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/css/323.3ce8246e.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/css/323.3ce8246e.chunk.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/css/main.81c2eb1c.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/css/main.81c2eb1c.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/323.6a2502f2.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/323.6a2502f2.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.472a2100.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.472a2100.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.472a2100.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/media/GothamPro.774ec39b5d5d3a63e212.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/formTab/formTab.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formTab/formTab.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/paletteTab/PaletteTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/paletteTab/PaletteTab.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/paletteTab/colorPicker/ColorPicker.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/paletteTab/palette/Palette.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/paletteTab/palette/Palette.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/paletteTab/palette/color/Color.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/paletteTab/palette/color/Color.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/paletteTab/palette/palette.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/paletteTab/palette/palette.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/formTab/FormTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formTab/FormTab.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,17 @@
       <recent name="$PROJECT_DIR$/src/assets/styles" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint">
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -111,6 +119,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.start" />
       </list>
@@ -139,7 +148,7 @@
       <workItem from="1666354081172" duration="26482000" />
       <workItem from="1666563371165" duration="583000" />
       <workItem from="1666597163454" duration="137000" />
-      <workItem from="1666597302555" duration="38922000" />
+      <workItem from="1666597302555" duration="42430000" />
     </task>
     <task id="LOCAL-00001" summary="form is ready">
       <created>1666527129666</created>
@@ -169,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666563519744</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="task is ready">
+      <created>1666637237516</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666637237516</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

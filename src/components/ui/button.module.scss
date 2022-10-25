@@ -12,4 +12,7 @@ button{
   color: #FFFFFF;
   width: 100%;
   cursor: pointer;
+  &:disabled{
+    background: rgba(118, 118, 128, 0.24);;
+  }
 }

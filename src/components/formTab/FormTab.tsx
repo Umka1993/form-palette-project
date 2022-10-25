@@ -30,12 +30,12 @@ export const FormTab: React.FC = () => {
   const { getRootProps } = useDropzone({
     accept: {
       'image/jpeg': [],
-      'image/png': []
+      'image/png': [],
     },
 
     onDrop: (acceptedFiles) => {
       acceptedFiles.map((files) => getFile(files));
-    }
+    },
   });
 
   const getFile = (file: File): void => {
@@ -71,6 +71,7 @@ export const FormTab: React.FC = () => {
           name={'name'}
           value={name}
           onChange={(e) => setName(e.target.value)}
+          required={true}
         />
         <label htmlFor="surName">Фамилия</label>
         <input
@@ -78,6 +79,7 @@ export const FormTab: React.FC = () => {
           id={'surName'}
           name={'surName'}
           value={surname}
+          required={true}
           onChange={(e) => setSurname(e.target.value)}
         />
         <label htmlFor="patronymic">Отчество</label>
@@ -87,6 +89,7 @@ export const FormTab: React.FC = () => {
           name={'patronymic'}
           value={patronymic}
           onChange={(e) => setPatronymic(e.target.value)}
+          required={true}
         />
         <label htmlFor="photo">
           Фото
@@ -99,10 +102,11 @@ export const FormTab: React.FC = () => {
                     backgroundImage: `url(${preview})`,
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat'
+                    backgroundRepeat: 'no-repeat',
                   }
                 : {}
-            }>
+            }
+          >
             <img src={loadPhoto} alt="loadPhoto" />
           </div>
           <input
@@ -115,6 +119,7 @@ export const FormTab: React.FC = () => {
               const file: File = (target.files as FileList)[0];
               getFile(file);
             }}
+            required={!picture}
           />
         </label>
         <Button>
